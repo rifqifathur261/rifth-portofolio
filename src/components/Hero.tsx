@@ -24,7 +24,7 @@ const Hero = () => (
       <img src={images.layer4} alt="mountain-4" className={styles.imageCover} />
     </Parallax>
 
-    <Parallax speed={-70} className="absolute">
+    <Parallax speed={-60} className="absolute">
       <img src={images.layer3} alt="mountain-3" className={styles.imageCover} />
     </Parallax>
 
