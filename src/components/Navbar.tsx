@@ -18,7 +18,10 @@ const Navbar = () => (
             className={index == navigations.length - 1 ? "mr-0" : "mr-6"}
             key={navItem}
           >
-            <a href={`#${navItem}`} className="text-text">
+            <a
+              href={`#${navItem}`}
+              className={`text-text ${styles.animatedUnderline}`}
+            >
               {navItem}
             </a>
           </li>

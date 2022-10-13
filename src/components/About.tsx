@@ -1,6 +1,7 @@
 import styles from "../style";
 import profile from "../assets/images/1658984065190.jpg";
 import { images } from "../constants";
+import { BsArrowRight } from "react-icons/bs";
 
 const About = () => (
   <div className={`${styles.flexCenter} ${styles.marginY}`}>
@@ -37,7 +38,7 @@ const About = () => (
         </div>
         <div className="flex-1 text-white">
           <h1 className="text-5xl sm:text-7xl font-bold">
-            <span className={styles.primaryTextGradient}>About</span> Me
+            <span className={`${styles.primaryTextGradient}`}>About</span> Me
           </h1>
           <p className="text-xl mt-4">
             Hello! My name is Rifqi i am a frontend developer with experience in
@@ -58,11 +59,17 @@ const About = () => (
               (item, index) => (
                 <div className="flex flex-row col-span-6 mt-4" key={index}>
                   <img src={images.indicator} alt="indicator" />
-                  <span className="ml-4">{item}</span>
+                  <span className="ml-4 text-xl text-grey">{item}</span>
                 </div>
               )
             )}
           </div>
+          <p className={`group ${styles.animatedUnderline} mt-12 text-accent`}>
+            <div className="flex">
+              <span className="text-2xl">Resume</span>
+              <BsArrowRight className="text-3xl ml-3 transition-all duration-500 group-hover:ml-5" />
+            </div>
+          </p>
         </div>
       </div>
     </div>

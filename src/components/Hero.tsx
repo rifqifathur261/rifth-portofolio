@@ -3,7 +3,7 @@ import { images } from "../constants";
 import styles from "../style";
 
 const Hero = () => (
-  <div className="flex justify-center items-center bg-illustration-bg relative w-full h-screen pt-[200px] pb-[200px]">
+  <div className="flex justify-center items-center bg-illustration-bg relative w-full h-screen pt-[200px] pb-[199px]">
     <Parallax speed={-990} className="absolute">
       <img src={images.sun} alt="sun" className={styles.imageCover} />
     </Parallax>
