@@ -32,7 +32,7 @@ const App = () => {
             <div
               className={`${styles.paddingX} ${styles.flexCenter} z-[2] absolute bg-base w-full`}
             >
-              <div className={`container`}>
+              <div className="container">
                 <About />
                 <Projects />
                 <Skills />

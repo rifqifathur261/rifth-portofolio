@@ -4,12 +4,12 @@ import { images } from "../constants";
 import { BsArrowRight } from "react-icons/bs";
 
 const About = () => (
-  <div className={`${styles.flexCenter} ${styles.marginY}`}>
+  <section id="about" className={`${styles.flexCenter} ${styles.marginY}`}>
     <div className="w-full">
       <p className="text-center text-grey font-bold tracking-[0.3em]">
         HI, MY NAME IS
       </p>
-      <h1 className={`${styles.primaryTextGradient} font-bold text-7xl mt-16`}>
+      <h1 className={`${styles.primaryTextGradient} font-bold text-6xl mt-16`}>
         Rifqi
         <br /> front-end dev.
       </h1>
@@ -37,7 +37,7 @@ const About = () => (
           </div>
         </div>
         <div className="flex-1 text-white">
-          <h1 className="text-5xl sm:text-7xl font-bold">
+          <h1 className="text-5xl sm:text-6xl font-bold">
             <span className={`${styles.primaryTextGradient}`}>About</span> Me
           </h1>
           <p className="text-xl mt-4">
@@ -73,7 +73,7 @@ const About = () => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default About;

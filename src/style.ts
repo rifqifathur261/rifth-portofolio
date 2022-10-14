@@ -18,6 +18,8 @@ const styles = {
 
   animatedUnderline:
     "inline-block relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-[0.063rem] before:rounded-full before:transition-all before:duration-500 before:bg-accent hover:before:w-full hover:before:opacity-100",
+
+  title: "text-white text-6xl font-bold",
 };
 
 export default styles;
