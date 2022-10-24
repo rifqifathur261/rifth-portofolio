@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
+import styles from "./style";
+import { motion } from "framer-motion";
 import {
   Navbar,
   Hero,
@@ -10,7 +12,6 @@ import {
   Footer,
   Loader,
 } from "./components/";
-import styles from "./style";
 
 const App = () => {
   const [loading, setLoading] = useState(true);

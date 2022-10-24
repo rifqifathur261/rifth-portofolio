@@ -20,7 +20,7 @@ const Navbar = () => (
           >
             <a
               href={`#${navItem}`}
-              className={`text-text ${styles.animatedUnderline}`}
+              className={`text-text ${styles.animatedUnderline} before:-bottom-1`}
             >
               {navItem}
             </a>

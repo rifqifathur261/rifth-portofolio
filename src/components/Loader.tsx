@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const loaderVariants = {
   animationOne: {
-    x: [-20, 20],
-    y: [0, -30],
+    x: [-40, 40],
+    y: [0, -60],
     transition: {
       x: {
         yoyo: Infinity,

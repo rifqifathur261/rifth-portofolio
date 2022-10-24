@@ -2,6 +2,7 @@ import styles from "../style";
 import profile from "../assets/images/1658984065190.jpg";
 import { images } from "../constants";
 import { BsArrowRight } from "react-icons/bs";
+import { Button } from "../components";
 
 const About = () => (
   <section id="about" className={`${styles.flexCenter} ${styles.marginY}`}>
@@ -22,14 +23,14 @@ const About = () => (
       <div
         className={`flex flex-col md:flex-row gap-10 sm:gap-24 mt-20 ${styles.paddingX}`}
       >
-        <div className="flex-1 flex md:justify-end justify-center">
-          <div className="group relative w-[18rem] h-[18rem] sm:w-[30rem] sm:h-[30rem] ">
-            <div className="w-[18rem] h-[18rem] sm:w-[30rem] sm:h-[30rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-2 group-hover:top-2 sm:right-6 sm:top-6 right-4 top-4 transition-all"></div>
-            <div className="w-[18rem] h-[18rem] sm:w-[30rem] sm:h-[30rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-2 group-hover:bottom-2 sm:left-6 sm:bottom-6 left-4 bottom-4 transition-all"></div>
+        <div className="flex-1 flex md:justify justify-center">
+          <div className="group relative w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] ">
+            <div className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-2 group-hover:top-2 sm:right-6 sm:top-6 right-4 top-4 transition-all"></div>
+            <div className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-2 group-hover:bottom-2 sm:left-6 sm:bottom-6 left-4 bottom-4 transition-all"></div>
             <img
               src={profile}
               alt="profile"
-              className="w-[18rem] h-[18rem] sm:w-[30rem] sm:h-[30rem] object-cover rounded-lg  hover:filter-none absolute"
+              className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
               style={{
                 filter: "sepia(100%) hue-rotate(140deg) saturate(150%) ",
               }}
@@ -64,12 +65,8 @@ const About = () => (
               )
             )}
           </div>
-          <p className={`group ${styles.animatedUnderline} mt-12 text-accent`}>
-            <div className="flex">
-              <span className="text-2xl">Resume</span>
-              <BsArrowRight className="text-3xl ml-3 transition-all duration-500 group-hover:ml-5" />
-            </div>
-          </p>
+
+          <Button props={{ text: "Resume", bottom: "before:-bottom-2" }} />
         </div>
       </div>
     </div>

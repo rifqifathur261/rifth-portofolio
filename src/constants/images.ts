@@ -14,6 +14,9 @@ import river from "../assets/images/illustration/river.png";
 //indicator
 import indicator from "../assets/images/indicator.svg";
 
+//image
+import projectImage from "../assets/images/project_image.png";
+
 export default {
   logo,
   layer1,
@@ -26,4 +29,5 @@ export default {
   birds,
   river,
   indicator,
+  projectImage,
 };

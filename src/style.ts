@@ -17,9 +17,13 @@ const styles = {
     "text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent",
 
   animatedUnderline:
-    "inline-block relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-[0.063rem] before:rounded-full before:transition-all before:duration-500 before:bg-accent hover:before:w-full hover:before:opacity-100",
+    "inline-block relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:left-0 before:w-0 before:h-[0.063rem] before:rounded-full before:transition-all before:duration-500 before:bg-accent hover:before:w-full hover:before:opacity-100",
 
   title: "text-white text-6xl font-bold",
+};
+
+export const layout = {
+  section: `flex md:flex-row flex-col ${styles.marginY}`,
 };
 
 export default styles;
