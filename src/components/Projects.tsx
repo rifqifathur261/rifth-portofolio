@@ -11,10 +11,10 @@ const Projects = () => {
   };
   return (
     <>
-      <section id="project">
+      <section id="projects">
         <Divider />
 
-        <div className={`${styles.flexCenter} `}>
+        <div className={`${styles.flexCenter} flex-col`}>
           <h1 className={styles.title}>
             Some <span className={styles.primaryTextGradient}>Things</span> I've
             Built
@@ -41,14 +41,14 @@ const Projects = () => {
         </div>
 
         {/* ITEMS */}
-        <div className="grid grid-cols-4 gap-4 xl:p-20 p-10">
+        <div className="grid grid-cols-4 gap-4 xl:py-20 py-10">
           {["1", "2", "2", "2", "2", "2", "2", "2"].map((item, index) => (
             <div className="bg-base-2 w-full rounded-lg p-4">
               <div className="relative h-52">
                 <img
                   src={images.projectImage}
-                  alt="project-image"
-                  className="w-full absolute h-52 object-cover"
+                  alt="project image"
+                  className="w-full absolute h-52 object-cover rounded-lg"
                 />
                 <div className="absolute bg-base-2 w-40 h-50 rounded-tl-lg rounded-tr-lg px-4 py-1 z-10 bottom-0 left-1/2 -ml-20 text-center text-grey">
                   <span>UI/UX</span>

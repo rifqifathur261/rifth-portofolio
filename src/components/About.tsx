@@ -1,7 +1,6 @@
 import styles from "../style";
-import profile from "../assets/images/1658984065190.jpg";
+import profile from "../assets/images/1658984065190.avif";
 import { images } from "../constants";
-import { BsArrowRight } from "react-icons/bs";
 import { Button } from "../components";
 
 const About = () => (
@@ -23,7 +22,7 @@ const About = () => (
       <div
         className={`flex flex-col md:flex-row gap-10 sm:gap-24 mt-20 ${styles.paddingX}`}
       >
-        <div className="flex-1 flex md:justify justify-center">
+        <div className="flex-1 flex md:justify justify-end">
           <div className="group relative w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] ">
             <div className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-2 group-hover:top-2 sm:right-6 sm:top-6 right-4 top-4 transition-all"></div>
             <div className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-2 group-hover:bottom-2 sm:left-6 sm:bottom-6 left-4 bottom-4 transition-all"></div>
