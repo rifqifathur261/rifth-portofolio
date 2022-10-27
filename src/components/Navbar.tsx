@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { images } from "../constants";
 import styles from "../style";
 
@@ -10,21 +11,32 @@ const Navbar = () => (
     <nav
       className={`container flex justify-between items-center ${styles.padding}`}
     >
-      <img src={images.logo} alt="logo" className="w-[90px] h-[20px]" />
+      <motion.img
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        src={images.logo}
+        alt="navbar logo"
+        className="w-[90px] h-[20px]"
+      />
 
       <ul className="flex justify-center items-center">
         {navigations.map((navItem, index) => (
-          <li
-            className={index == navigations.length - 1 ? "mr-0" : "mr-6"}
-            key={navItem}
+          <motion.div
+            whileInView={{ x: [100, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.5, delay: 1 }}
           >
-            <a
-              href={`#${navItem}`}
-              className={`text-text ${styles.animatedUnderline} before:-bottom-1`}
+            <li
+              className={index == navigations.length - 1 ? "mr-0" : "mr-6"}
+              key={navItem}
             >
-              {navItem}
-            </a>
-          </li>
+              <a
+                href={`#${navItem}`}
+                className={`text-text ${styles.animatedUnderline} before:-bottom-1`}
+              >
+                {navItem}
+              </a>
+            </li>
+          </motion.div>
         ))}
       </ul>
 

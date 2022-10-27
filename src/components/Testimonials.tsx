@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import { images } from "../constants";
 import styles from "../style";
 import Divider from "./Divider";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const Testimonials = () => {
   return (
