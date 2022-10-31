@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { images } from "../constants";
 import styles from "../style";
+import MotionWrap from "../wrapper/MotionWrap";
 import Divider from "./Divider";
 
 const Testimonials = () => {
@@ -19,8 +20,11 @@ const Testimonials = () => {
         </div>
         <div className={`${styles.flexCenter} mt-14 gap-20`}>
           <img src={images.icArrowLeft} alt="Icon arrow left" />
-          {[1].map((item) => (
-            <div className="w-4/5 bg-base-2 flex flex-col p-8 flex-shrink">
+          {[1].map((item, index) => (
+            <div
+              className="w-4/5 bg-base-2 flex flex-col p-8 flex-shrink"
+              key={index}
+            >
               <div className="flex flex-row gap-6">
                 <img
                   src={images.testimonialProfile}
@@ -50,4 +54,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default MotionWrap(Testimonials, "");

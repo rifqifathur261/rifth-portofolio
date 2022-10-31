@@ -12,7 +12,7 @@ const Navbar = () => (
       className={`container flex justify-between items-center ${styles.padding}`}
     >
       <motion.img
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        whileInView={{ x: [0, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
         src={images.logo}
         alt="navbar logo"
@@ -22,13 +22,11 @@ const Navbar = () => (
       <ul className="flex justify-center items-center">
         {navigations.map((navItem, index) => (
           <motion.div
-            whileInView={{ x: [100, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.5, delay: 1 }}
+            whileInView={{ y: [0, 0], opacity: [0, 1] }}
+            transition={{ duration: index * 0.5 }}
+            key={navItem}
           >
-            <li
-              className={index == navigations.length - 1 ? "mr-0" : "mr-6"}
-              key={navItem}
-            >
+            <li className={index == navigations.length - 1 ? "mr-0" : "mr-6"}>
               <a
                 href={`#${navItem}`}
                 className={`text-text ${styles.animatedUnderline} before:-bottom-1`}

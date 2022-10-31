@@ -3,6 +3,7 @@ import Button from "./Button";
 import Divider from "./Divider";
 import { FiLinkedin, FiInstagram, FiGithub, FiMail } from "react-icons/fi";
 import { useState } from "react";
+import MotionWrap from "../wrapper/MotionWrap";
 
 const Footer = () => {
   return (
@@ -28,19 +29,19 @@ const Footer = () => {
           <div className="flex gap-16 my-24">
             <FiLinkedin
               className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              stroke-width="1px"
+              strokeWidth="1px"
             />
             <FiInstagram
               className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              stroke-width="1px"
+              strokeWidth="1px"
             />
             <FiGithub
               className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              stroke-width="1px"
+              strokeWidth="1px"
             />
             <FiMail
               className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              stroke-width="1px"
+              strokeWidth="1px"
             />
           </div>
           <div>
@@ -62,4 +63,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default MotionWrap(Footer, "");

@@ -1,6 +1,7 @@
 import { Parallax } from "react-scroll-parallax";
 import { images } from "../constants";
 import styles from "../style";
+import MotionWrap from "../wrapper/MotionWrap";
 
 const Hero = () => (
   <div className="flex justify-center items-center bg-illustration-bg relative w-full h-screen pt-[200px] pb-[199px]">
@@ -38,4 +39,7 @@ const Hero = () => (
   </div>
 );
 
-export default Hero;
+export default MotionWrap(
+  Hero,
+  "flex justify-center items-center bg-illustration-bg relative w-full h-screen pt-[200px] pb-[199px]"
+);

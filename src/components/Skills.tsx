@@ -1,6 +1,7 @@
 import { Divider } from "../components";
 import { images } from "../constants";
 import styles from "../style";
+import MotionWrap from "../wrapper/MotionWrap";
 
 const Skills = () => {
   return (
@@ -31,8 +32,8 @@ const Skills = () => {
                 "tes",
                 "test",
                 "tess",
-              ].map((item) => (
-                <div className={`${styles.flexCenter} flex-col`}>
+              ].map((item, index) => (
+                <div className={`${styles.flexCenter} flex-col`} key={index}>
                   <div className="rounded-full bg-base-2 p-5 w-20 h-20">
                     <img src={images.vue} alt="Skill logo" />
                   </div>
@@ -75,4 +76,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default MotionWrap(Skills, "");

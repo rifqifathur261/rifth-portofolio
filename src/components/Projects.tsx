@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "../style";
 import { images } from "../constants";
 import { Button, Divider } from "../components";
+import MotionWrap from "../wrapper/MotionWrap";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -43,7 +44,7 @@ const Projects = () => {
         {/* ITEMS */}
         <div className="grid grid-cols-4 gap-4 xl:py-20 py-10">
           {["1", "2", "2", "2", "2", "2", "2", "2"].map((item, index) => (
-            <div className="bg-base-2 w-full rounded-lg p-4">
+            <div className="bg-base-2 w-full rounded-lg p-4" key={index}>
               <div className="relative h-52">
                 <img
                   src={images.projectImage}
@@ -74,4 +75,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default MotionWrap(Projects, "");
