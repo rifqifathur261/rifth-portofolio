@@ -51,11 +51,11 @@ const Footer = () => {
                 Rifqi Fathurrahman
               </span>
             </p>
-            <p className={`text-white text-sm mt-4`}>
+            {/* <p className={`text-white text-sm mt-4`}>
               Inspired by{" "}
               <span className={styles.primaryTextGradient}>Ruination</span> from
               League of Legends
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

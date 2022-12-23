@@ -13,8 +13,12 @@ const styles = {
 
   imageCover: "w-screen h-screen object-cover",
 
+  primaryGradient: "bg-gradient-to-r from-primary to-accent",
+
   primaryTextGradient:
     "text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent",
+
+  occeanGradient: "bg-gradient-to-r from-occean-1 to-occean-2",
 
   occeanTextGradient:
     "text-transparent bg-clip-text bg-gradient-to-r from-occean-1 to-occean-2",

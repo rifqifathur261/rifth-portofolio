@@ -8,5 +8,8 @@ export default {
             title: 'Title',
             type: 'string',
         },
+    ],
+    by: [
+        { field: 'title', direction: 'asc' }
     ]
 }

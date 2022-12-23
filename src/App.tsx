@@ -14,11 +14,14 @@ import {
 } from "./components/";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    console.log("Component mounted");
+
+    // setTimeout(() => setLoading(false), 2000);
   });
+
   return (
     <>
       {loading ? (
