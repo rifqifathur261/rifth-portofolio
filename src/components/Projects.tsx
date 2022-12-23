@@ -18,15 +18,12 @@ const Projects = () => {
   useEffect(() => {
     const filterQuery = '*[_type == "projectFilters"]';
     const projectQuery = '*[_type == "projects"]';
-    console.log("project mounted ");
 
     client.fetch(filterQuery).then((res) => {
-      console.log("filter ", res);
       setFilters(res);
     });
 
     client.fetch(projectQuery).then((res) => {
-      console.log("Project ", res);
       setProjects(res);
     });
   }, []);

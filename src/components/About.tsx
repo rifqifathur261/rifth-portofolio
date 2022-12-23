@@ -13,7 +13,6 @@ const About = () => {
   useEffect(() => {
     const query = '*[_type == "about"]';
     client.fetch(query).then((data) => {
-      console.log("data euy ", data);
       setAbout(data[0]);
     });
   }, []);
