@@ -4,19 +4,15 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'title',
-            title: 'Title',
-            type: 'string',
-        },
-        {
-            name: 'company',
-            title: 'Company',
-            type: 'string',
-        },
-        {
             name: 'year',
             title: 'Year',
             type: 'string',
+        },
+        {
+            name: 'works',
+            title: 'Works',
+            type: 'array',
+            of: [{ type: 'workExperience' }],
         },
     ]
 }
