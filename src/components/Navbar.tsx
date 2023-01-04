@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { images } from "../constants";
 import styles from "../style";
 
 const navigations = ["About", "Projects", "Skills", "Testimonials", "Contact"];
 
 const Navbar = () => {
+  const [toogle, setToogle] = useState(false);
+
   return (
     <div
       className={`${styles.flexCenter} w-full bg-transparent backdrop-blur-sm fixed z-[3]`}
@@ -20,7 +23,7 @@ const Navbar = () => {
           className="w-[90px] h-[20px]"
         />
 
-        <ul className="flex justify-center items-center">
+        <ul className="sm:flex justify-center items-center hidden">
           {navigations.map((navItem, index) => (
             <motion.div
               whileInView={{ y: [0, 0], opacity: [0, 1] }}
@@ -39,8 +42,43 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img src="" alt="" />
+        <div className="sm:hidden flex flex-1 justify-end items-center relative">
+          <img
+            src={images.icMenu}
+            alt="hamburger"
+            onClick={() => setToogle(true)}
+          />
+
+          {toogle && (
+            <motion.aside
+              initial={{ width: 0 }}
+              animate={{ width: 300 }}
+              exit={{
+                width: 0,
+                transition: { delay: 0.7, duration: 0.3 },
+              }}
+              className="fixed z-10 top-0 right-0  p-4 h-screen bg-primary"
+            >
+              <img
+                src={images.icClose}
+                alt="hamburger"
+                onClick={() => setToogle(false)}
+              />
+              <ul className="">
+                {/* <li>Item</li> */}
+                {navigations.map((item, index) => (
+                  <li key={index} className="m-4 font-thin text-white text-xl">
+                    <a
+                      href={`#${item}`}
+                      className={`text-text ${styles.animatedUnderline} before:-bottom-1`}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.aside>
+          )}
         </div>
       </nav>
     </div>

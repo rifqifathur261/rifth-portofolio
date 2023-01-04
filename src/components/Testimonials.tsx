@@ -21,7 +21,6 @@ const Testimonials = () => {
       .fetch(query)
       .then((res) => {
         setTestimonials(res);
-        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -61,10 +60,9 @@ const Testimonials = () => {
           <img
             src={images.icArrowLeft}
             alt="Icon arrow left"
-            className="hover:-translate-x-4 transition-all cursor-pointer"
+            className="hover:-translate-x-4 transition-all cursor-pointer md:flex hidden "
             onClick={() => nextPrev(false)}
           />
-          {/* {[1].map((item, index) => ( */}
           <div
             className={`w-4/5 p-1 flex-shrink transition-all ${styles.primaryGradient}`}
           >
@@ -92,7 +90,6 @@ const Testimonials = () => {
               </p>
             </div>
           </div>
-          {/* ))} */}
           <img
             src={images.icArrowRight}
             alt="Icon arrow right"

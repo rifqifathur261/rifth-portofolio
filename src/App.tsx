@@ -17,9 +17,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("Component mounted");
-
-    // setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 2000);
   });
 
   return (
@@ -41,7 +39,7 @@ const App = () => {
                 <Projects />
                 <Skills />
                 <Testimonials />
-                <Footer />
+                {/* <Footer /> */}
               </div>
             </div>
           </div>

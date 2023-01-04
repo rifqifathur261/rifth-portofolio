@@ -31,9 +31,11 @@ import unity from "../assets/images/skills/unity.avif";
 import vue from "../assets/images/skills/vue.webp";
 import vuetify from "../assets/images/skills/vuetify.webp";
 
-//
+//icon
 import icArrowRight from "../assets/images/arrow_right.svg";
 import icArrowLeft from "../assets/images/arrow_left.svg";
+import icMenu from "../assets/images/menu_icon.svg";
+import icClose from "../assets/images/close_icon.svg";
 
 export default {
   logo,
@@ -62,4 +64,6 @@ export default {
   testimonialProfile,
   icArrowRight,
   icArrowLeft,
+  icMenu,
+  icClose,
 };

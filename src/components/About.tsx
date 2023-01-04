@@ -26,8 +26,8 @@ const About = () => {
         <h1
           className={`${styles.primaryTextGradient} font-bold text-6xl mt-16`}
         >
-          Rifqi
-          <br /> front-end dev.
+          {about.name}
+          <div>{about.profession}</div>
         </h1>
         <div className={styles.flexCenter}>
           <p className="text-center text-grey font-bold text-2xl mt-10 sm:max-w-[480px] w-full">
@@ -39,12 +39,12 @@ const About = () => {
         >
           <div className="flex-1 flex md:justify justify-end">
             <div className="group relative w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] ">
-              <div className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-2 group-hover:top-2 sm:right-6 sm:top-6 right-4 top-4 transition-all"></div>
-              <div className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-2 group-hover:bottom-2 sm:left-6 sm:bottom-6 left-4 bottom-4 transition-all"></div>
+              <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-2 group-hover:top-2 sm:right-6 sm:top-6 right-4 top-4 transition-all"></div>
+              <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-2 group-hover:bottom-2 sm:left-6 sm:bottom-6 left-4 bottom-4 transition-all"></div>
               <img
                 src={profile}
                 alt="profile"
-                className="w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
+                className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
                 style={{
                   filter: "sepia(100%) hue-rotate(140deg) saturate(150%) ",
                 }}
@@ -63,8 +63,11 @@ const About = () => {
             </p>
             <div className="grid grid-cols-12">
               {about.recentTechs?.map((item: any, index: any) => (
-                <div className="flex flex-row col-span-6 mt-4" key={index}>
-                  <img src={images.indicator} alt="indicator" />
+                <div
+                  className="flex items-center flex-row col-span-6 mt-4"
+                  key={index}
+                >
+                  <img src={images.indicator} alt="indicator" width="20" />
                   <span className="ml-4 text-xl text-grey">{item}</span>
                 </div>
               ))}

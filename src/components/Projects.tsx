@@ -40,7 +40,7 @@ const Projects = () => {
           </h1>
 
           {/* FILTERS */}
-          <div className="flex flex-row mt-20">
+          <div className="flex flex-wrap justify-center flex-row mt-10 sm:mt20">
             {filters?.map((item: any, index) => (
               <div
                 key={index}
@@ -58,7 +58,7 @@ const Projects = () => {
         </div>
 
         {/* ITEMS */}
-        <div className="grid grid-cols-4 gap-4 xl:py-20 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 xl:py-20 py-10">
           {projects?.map((item: any, index) => (
             <div className="bg-base-2 w-full rounded-lg p-4" key={index}>
               <div className="relative h-52">
