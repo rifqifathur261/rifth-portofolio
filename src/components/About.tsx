@@ -18,7 +18,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className={`${styles.flexCenter} ${styles.marginY}`}>
+    <section className={`${styles.flexCenter} ${styles.marginY}`}>
       <div className="w-full">
         <p className="text-center text-grey font-bold tracking-[0.3em] mr-">
           HI, MY NAME IS
@@ -37,14 +37,14 @@ const About = () => {
         <div
           className={`flex flex-col md:flex-row gap-10 sm:gap-24 mt-20 ${styles.paddingX}`}
         >
-          <div className="flex-1 flex md:justify justify-end">
-            <div className="group relative w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] ">
-              <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-2 group-hover:top-2 sm:right-6 sm:top-6 right-4 top-4 transition-all"></div>
-              <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-2 group-hover:bottom-2 sm:left-6 sm:bottom-6 left-4 bottom-4 transition-all"></div>
+          <div className="flex-1 flex md:justify md:justify-end justify-center">
+            <div className="group relative w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] flex justify-center items-center">
+              <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-5 group-hover:top-5 sm:right-6 sm:top-6 right-3 top-3 transition-all"></div>
+              <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-5 group-hover:bottom-5 sm:left-6 sm:bottom-6 left-3 bottom-3 transition-all"></div>
               <img
                 src={profile}
                 alt="profile"
-                className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
+                className="w-[14rem] h-[14rem]  sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
                 style={{
                   filter: "sepia(100%) hue-rotate(140deg) saturate(150%) ",
                 }}
@@ -68,7 +68,7 @@ const About = () => {
                   key={index}
                 >
                   <img src={images.indicator} alt="indicator" width="20" />
-                  <span className="ml-4 text-xl text-grey">{item}</span>
+                  <span className="ml-4 text-lg text-grey">{item}</span>
                 </div>
               ))}
             </div>
@@ -87,4 +87,4 @@ const About = () => {
   );
 };
 
-export default MotionWrap(About, "");
+export default MotionWrap(About, "", "About");

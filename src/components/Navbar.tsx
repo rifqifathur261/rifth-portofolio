@@ -3,7 +3,7 @@ import { useState } from "react";
 import { images } from "../constants";
 import styles from "../style";
 
-const navigations = ["About", "Projects", "Skills", "Testimonials", "Contact"];
+const navigations = ["About", "Projects", "Skills", "Testimonials"];
 
 const Navbar = () => {
   const [toogle, setToogle] = useState(false);
@@ -26,8 +26,8 @@ const Navbar = () => {
         <ul className="sm:flex justify-center items-center hidden">
           {navigations.map((navItem, index) => (
             <motion.div
-              whileInView={{ y: [0, 0], opacity: [0, 1] }}
-              transition={{ duration: index * 0.5 }}
+              whileInView={{ y: [100, 0] }}
+              transition={{ duration: index * 0.5, delay: 0.5 }}
               key={navItem}
             >
               <li className={index == navigations.length - 1 ? "mr-0" : "mr-6"}>

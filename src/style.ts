@@ -9,7 +9,7 @@ const styles = {
   padding: "sm:px-8 px-6 sm:py-6 py-4",
 
   marginX: "sm:mx-16 mx-6",
-  marginY: "sm:my-28 my-6",
+  marginY: "sm:my-28 my-20",
 
   imageCover: "w-screen h-screen object-cover",
 

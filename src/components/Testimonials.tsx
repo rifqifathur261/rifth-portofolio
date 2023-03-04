@@ -47,7 +47,7 @@ const Testimonials = () => {
     <>
       <Divider />
 
-      <section id="testimonials">
+      <section>
         <div className="text-center">
           <h1 className={`${styles.title} text-center`}>
             <span className={styles.primaryTextGradient}>Testimonials</span>
@@ -60,40 +60,56 @@ const Testimonials = () => {
           <img
             src={images.icArrowLeft}
             alt="Icon arrow left"
-            className="hover:-translate-x-4 transition-all cursor-pointer md:flex hidden "
+            className="hover:-translate-x-4 transition-all cursor-pointer sm:flex hidden "
             onClick={() => nextPrev(false)}
           />
-          <div
-            className={`w-4/5 p-1 flex-shrink transition-all ${styles.primaryGradient}`}
-          >
-            <div className="bg-base flex flex-col p-8">
-              <div className="flex flex-row gap-6">
-                {testimonials[currentIndex]?.image && (
-                  <img
-                    src={urlFor(testimonials[currentIndex]?.image).url()}
-                    alt="Testimonial Profile"
-                    className="w-16 h-16 rounded-full"
-                  />
-                )}
+          <div className="">
+            <div
+              className={`p-1 flex-shrink transition-all ${styles.primaryGradient}`}
+            >
+              <div className="bg-base flex flex-col p-8">
+                <div className="flex flex-row gap-6">
+                  {testimonials[currentIndex]?.image && (
+                    <img
+                      src={urlFor(testimonials[currentIndex]?.image).url()}
+                      alt="Testimonial Profile"
+                      className="w-16 h-16 rounded-full"
+                    />
+                  )}
 
-                <div className="gap-2 flex flex-col">
-                  <div className={`${styles.occeanTextGradient} text-sm`}>
-                    {testimonials[currentIndex]?.company}
-                  </div>
-                  <div className="text-white font-bold text-3xl">
-                    {testimonials[currentIndex]?.name}
+                  <div className="gap-2 flex flex-col">
+                    <div className={`${styles.occeanTextGradient} text-sm`}>
+                      {testimonials[currentIndex]?.company}
+                    </div>
+                    <div className="text-white font-bold text-2xl">
+                      {testimonials[currentIndex]?.name}
+                    </div>
                   </div>
                 </div>
+                <p className="text-grey italic mt-6">
+                  {testimonials[currentIndex]?.description}
+                </p>
               </div>
-              <p className="text-grey italic mt-6">
-                {testimonials[currentIndex]?.description}
-              </p>
+            </div>
+            <div className="flex sm:hidden flex-row justify-center gap-10 mt-5">
+              <img
+                src={images.icArrowLeft}
+                alt="Icon arrow left"
+                className="hover:-translate-x-4 transition-all cursor-pointer"
+                onClick={() => nextPrev(false)}
+              />
+              <img
+                src={images.icArrowRight}
+                alt="Icon arrow right"
+                className="hover:translate-x-4 transition-all cursor-pointer"
+                onClick={() => nextPrev(true)}
+              />
             </div>
           </div>
           <img
             src={images.icArrowRight}
             alt="Icon arrow right"
-            className="hover:translate-x-4 transition-all cursor-pointer"
+            className="hover:translate-x-4 transition-all cursor-pointer sm:flex hidden"
             onClick={() => nextPrev(true)}
           />
         </div>
@@ -102,4 +118,4 @@ const Testimonials = () => {
   );
 };
 
-export default MotionWrap(Testimonials, "");
+export default MotionWrap(Testimonials, "", "Testimonials");

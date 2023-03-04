@@ -41,5 +41,6 @@ const Hero = () => (
 
 export default MotionWrap(
   Hero,
-  "flex justify-center items-center bg-illustration-bg relative w-full h-screen pt-[200px] pb-[199px]"
+  "flex justify-center items-center bg-illustration-bg relative w-full h-screen pt-[200px] pb-[199px]",
+  "Hero"
 );

@@ -1,7 +1,7 @@
 import styles from "../style";
 import Button from "./Button";
 import Divider from "./Divider";
-import { FiLinkedin, FiInstagram, FiGithub, FiMail } from "react-icons/fi";
+import { FiLinkedin, FiInstagram, FiGithub, FiFigma } from "react-icons/fi";
 import { useState } from "react";
 import MotionWrap from "../wrapper/MotionWrap";
 
@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <Divider />
-      <section id="footer">
+      <section>
         <div className={`${styles.flexCenter} flex-col text-center mb-11`}>
           <h1 className={`${styles.title}`}>
             Get In
@@ -22,27 +22,39 @@ const Footer = () => {
           </p>
           <div>
             <Button
-              props={{ text: "Say Hello!", bottom: "before:-bottom-1" }}
+              props={{
+                text: "Say Hello!",
+                bottom: "before:-bottom-1",
+                url: "",
+              }}
             />
           </div>
 
           <div className="flex gap-16 my-24">
-            <FiLinkedin
-              className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              strokeWidth="1px"
-            />
-            <FiInstagram
-              className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              strokeWidth="1px"
-            />
-            <FiGithub
-              className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              strokeWidth="1px"
-            />
-            <FiMail
-              className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
-              strokeWidth="1px"
-            />
+            <a href="https://www.linkedin.com/in/rifqifathurrahman261/">
+              <FiLinkedin
+                className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
+                strokeWidth="1px"
+              />
+            </a>
+            <a href="https://www.instagram.com/rifth02/">
+              <FiInstagram
+                className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
+                strokeWidth="1px"
+              />
+            </a>
+            <a href="https://github.com/rifqifathur261">
+              <FiGithub
+                className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
+                strokeWidth="1px"
+              />
+            </a>
+            <a href="https://www.figma.com/@rifth">
+              <FiFigma
+                className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
+                strokeWidth="1px"
+              />
+            </a>
           </div>
           <div>
             <p className={`text-white text-sm`}>
@@ -63,4 +75,4 @@ const Footer = () => {
   );
 };
 
-export default MotionWrap(Footer, "");
+export default MotionWrap(Footer, "", "Footer");

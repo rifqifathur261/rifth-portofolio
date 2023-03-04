@@ -9,7 +9,4 @@ export default {
             type: 'string',
         },
     ],
-    by: [
-        { field: 'title', direction: 'asc' }
-    ]
 }
