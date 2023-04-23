@@ -7,7 +7,7 @@ import { client, urlFor } from "../client";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const [animateCard, setAnimateCard] = useState([{ y: 0, opacity: 1 }]);
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [activeFilter, setActiveFilter] = useState("All");
   const [filters, setFilters] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -29,11 +29,11 @@ const Projects = () => {
 
   const handleProjectFilter = (item: any) => {
     setActiveFilter(item);
-    setAnimateCard([{ y: 100, opacity: 0 }]);
+    setAnimateCard({ y: 100, opacity: 0 });
     // console.log("item ", item);
 
     setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
+      setAnimateCard({ y: 0, opacity: 1 });
 
       if (item === "All") {
         // console.log("all");
