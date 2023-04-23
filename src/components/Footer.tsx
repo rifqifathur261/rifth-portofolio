@@ -59,9 +59,7 @@ const Footer = () => {
           <div>
             <p className={`text-white text-sm`}>
               Design & Built by{" "}
-              <span className={styles.occeanTextGradient}>
-                Rifqi Fathurrahman
-              </span>
+              <span className={styles.occeanTextGradient}>Rifth</span>
             </p>
             {/* <p className={`text-white text-sm mt-4`}>
               Inspired by{" "}

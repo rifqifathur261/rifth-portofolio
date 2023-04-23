@@ -41,14 +41,24 @@ const About = () => {
             <div className="group relative w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem] flex justify-center items-center">
               <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:right-4 group-hover:sm:top-4 group-hover:right-5 group-hover:top-5 sm:right-6 sm:top-6 right-3 top-3 transition-all"></div>
               <div className="w-[14rem] h-[14rem] sm:w-[20rem] sm:h-[20rem] border-[3px] border-accent rounded-lg absolute group-hover:sm:left-4 group-hover:sm:bottom-4 group-hover:left-5 group-hover:bottom-5 sm:left-6 sm:bottom-6 left-3 bottom-3 transition-all"></div>
-              <img
+              {/* <img
                 src={profile}
                 alt="profile"
                 className="w-[14rem] h-[14rem]  sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
                 style={{
                   filter: "sepia(100%) hue-rotate(140deg) saturate(150%) ",
                 }}
-              />
+              /> */}
+              {about.profileImage && (
+                <img
+                  src={urlFor(about.profileImage).url()}
+                  alt="profile"
+                  style={{
+                    filter: "sepia(100%) hue-rotate(140deg) saturate(150%) ",
+                  }}
+                  className="w-[14rem] h-[14rem]  sm:w-[20rem] sm:h-[20rem] object-cover rounded-lg  hover:filter-none absolute"
+                />
+              )}
             </div>
           </div>
           <div className="flex-1 text-white">
