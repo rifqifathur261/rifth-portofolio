@@ -1,9 +1,8 @@
 import styles from "../style";
-import Button from "./Button";
 import Divider from "./Divider";
 import { FiLinkedin, FiInstagram, FiGithub, FiFigma } from "react-icons/fi";
-import { useState } from "react";
 import MotionWrap from "../wrapper/MotionWrap";
+import { Button } from "../components";
 
 const Footer = () => {
   return (
@@ -25,7 +24,7 @@ const Footer = () => {
               props={{
                 text: "Say Hello!",
                 bottom: "before:-bottom-1",
-                url: "",
+                url: "mailto:goniawan261@gmail.com?subject=Hello Rifqi!",
               }}
             />
           </div>
