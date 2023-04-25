@@ -41,12 +41,13 @@ const Projects = () => {
         setFilterWork(projects);
       } else {
         // console.log("else");
-        // console.log("active filter ", item);
-        // setFilterWork(
-        //   projects.filter((res: any) => {
-        //     console.log(res.type == item);
-        //   })
-        // );
+        console.log("active filter ", item);
+        setFilterWork(
+          projects.filter((res: any) => {
+            return res.type == item;
+            // console.log(res.type == item);
+          })
+        );
         // console.log(
         //   "filterwork ",
         //   projects.filter((res: any) => res.type == item)
