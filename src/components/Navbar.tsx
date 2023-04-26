@@ -17,7 +17,7 @@ const Navbar = () => {
       >
         <motion.img
           whileInView={{ x: [0, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
           src={images.logo}
           alt="navbar logo"
           className="w-[90px] h-[20px]"
@@ -26,8 +26,8 @@ const Navbar = () => {
         <ul className="sm:flex justify-center items-center hidden">
           {navigations.map((navItem, index) => (
             <motion.div
-              whileInView={{ y: [100, 0] }}
-              transition={{ duration: index * 0.5, delay: 0.5 }}
+              whileInView={{ x: [0, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.5, delay: 1.2 }}
               key={navItem}
             >
               <li className={index == navigations.length - 1 ? "mr-0" : "mr-6"}>

@@ -44,8 +44,7 @@ const Projects = () => {
         console.log("active filter ", item);
         setFilterWork(
           projects.filter((res: any) => {
-            return res.type == item;
-            // console.log(res.type == item);
+            return res.tags.includes(item);
           })
         );
         // console.log(
@@ -97,13 +96,15 @@ const Projects = () => {
           {filterWork.map((item: any, index) => (
             <div className="bg-base-2 w-full rounded-lg p-4" key={index}>
               <div className="relative h-52">
-                <img
-                  src={urlFor(item.imgUrl).url()}
-                  alt="project image"
-                  className="w-full absolute h-52 object-cover rounded-lg"
-                />
+                {item.imgUrl && (
+                  <img
+                    src={urlFor(item.imgUrl).url()}
+                    alt="project image"
+                    className="w-full absolute h-52 object-cover rounded-lg"
+                  />
+                )}
                 <div className="absolute bg-base-2 w-40 h-50 rounded-tl-lg rounded-tr-lg px-4 py-1 z-10 bottom-0 left-1/2 -ml-20 text-center text-grey">
-                  <span>{item.tags[1]}</span>
+                  <span>{item.type}</span>
                 </div>
               </div>
               <div>
@@ -120,7 +121,11 @@ const Projects = () => {
         )} */}
         <div className="text-center">
           <Button
-            props={{ text: "See More", bottom: "before:-bottom-2", url: "" }}
+            props={{
+              text: "See on Github",
+              bottom: "before:-bottom-2",
+              url: "https://github.com/rifqifathur261",
+            }}
           />
         </div>
       </section>
