@@ -48,7 +48,7 @@ const Skills = () => {
               <div className="flex flex-wrap md:justify-start justify-center gap-8 text-white">
                 {skills.map((item: any, index) => (
                   <div className={`${styles.flexCenter} flex-col`} key={index}>
-                    <div className="rounded-full bg-base-2 p-5 w-20 h-20">
+                    <div className="rounded-full bg-base-2 p-5 w-20 h-20 flex items-center">
                       <img src={urlFor(item.image).url()} alt="Skill logo" />
                     </div>
                     <span className="mt-4">{item.title}</span>

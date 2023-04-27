@@ -15,7 +15,7 @@ const Footer = () => {
             <span className={styles.primaryTextGradient}> Touch</span>
           </h1>
 
-          <p className="text-grey my-20 w-2/5 text-2xl">
+          <p className="text-grey my-20 sm:w-2/5 text-2xl">
             My inbox is always open. Whether you have a question or just want to
             say hi, I’ll try my best to get back to you!
           </p>
@@ -29,7 +29,7 @@ const Footer = () => {
             />
           </div>
 
-          <div className="flex gap-16 my-24">
+          <div className="flex sm:gap-16 gap-10 my-24">
             <a href="https://www.linkedin.com/in/rifqifathurrahman261/">
               <FiLinkedin
                 className="w-12 h-12 text-grey hover:text-accent cursor-pointer"
