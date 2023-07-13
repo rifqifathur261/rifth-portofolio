@@ -1,9 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { images } from "../constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import TrainLayer from "./TrainLayer";
 
 const MultiLayerParallax = () => {
+  const [loader, setOnload] = useState({});
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -19,6 +20,10 @@ const MultiLayerParallax = () => {
   const layerBirds = useTransform(scrollYProgress, [0, 1], ["0%", "220%"]);
   const layerSun = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
   const layerTrain = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
+
+  const handleLoader = (img: any) => {
+    console.log("img ", img);
+  };
 
   return (
     <div
@@ -37,6 +42,7 @@ const MultiLayerParallax = () => {
         <TrainLayer />
       </motion.div> */}
       <motion.div
+        onLoad={() => handleLoader("Train2")}
         id="Train2"
         initial={{ x: 1500 }}
         animate={{
@@ -49,7 +55,7 @@ const MultiLayerParallax = () => {
         }}
         className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/Train2.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/Train2.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layerSun,
@@ -68,7 +74,7 @@ const MultiLayerParallax = () => {
         }}
         className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/Train1.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/Train1.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
@@ -80,7 +86,7 @@ const MultiLayerParallax = () => {
         // transition={{ delay: 1.8 }}
         className="absolute inset-0 z-[50] -pb-20"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/Bridge1.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/Bridge.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
