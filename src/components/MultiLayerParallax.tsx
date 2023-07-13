@@ -11,7 +11,7 @@ const MultiLayerParallax = () => {
     offset: ["start start", "end start"],
   });
 
-  const layer1 = useTransform(scrollYProgress, [0, 1], ["0%", "1%"]);
+  const layer1 = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
   const layer2 = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
   const layer3 = useTransform(scrollYProgress, [0, 1], ["0%", "140%"]);
   const layer4 = useTransform(scrollYProgress, [0, 1], ["0%", "160%"]);
@@ -20,6 +20,7 @@ const MultiLayerParallax = () => {
   const layerBirds = useTransform(scrollYProgress, [0, 1], ["0%", "220%"]);
   const layerSun = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
   const layerTrain = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
+  // const asd = useTransform()
 
   return (
     <div
@@ -27,8 +28,8 @@ const MultiLayerParallax = () => {
       className="w-full h-screen overflow-hidden relative grid place-content-center bg-illustration-bg"
     >
       <motion.div
-        initial={{ y: 100 }}
-        animate={{ y: [0, 180] }}
+        // initial={{ y: 100 }}
+        // animate={{ y: [180, -30] }}
         transition={{ delay: 2.5 }}
         className="absolute inset-0 z-[50]"
         style={{

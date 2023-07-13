@@ -26,6 +26,7 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
+        // <ParallaxProvider>
         <div>
           <div className="font-walsheim bg-base w-full">
             <Navbar />
@@ -45,7 +46,6 @@ const App = () => {
             </div>
           </div>
         </div>
-        // <ParallaxProvider>
         // </ParallaxProvider>
       )}
     </>

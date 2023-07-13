@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { images } from "../constants";
 import styles from "../style";
@@ -7,7 +7,20 @@ const navigations = ["About", "Projects", "Skills", "Testimonials"];
 
 const Navbar = () => {
   const [toogle, setToogle] = useState(false);
-
+  const sideVariants = {
+    closed: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      },
+    },
+  };
   return (
     <div
       className={`${styles.flexCenter} w-full bg-transparent backdrop-blur-sm fixed z-[100]`}
@@ -49,33 +62,49 @@ const Navbar = () => {
             alt="hamburger"
             onClick={() => setToogle(true)}
           />
-
-          {toogle && (
-            <motion.aside
-              initial={{ width: 0 }}
-              animate={{ width: 300 }}
-              className="fixed z-10 top-0 right-0  p-4 h-screen bg-primary"
-            >
-              <img
-                src={images.icClose}
-                alt="hamburger"
-                onClick={() => setToogle(false)}
-              />
-              <ul className="">
-                {/* <li>Item</li> */}
-                {navigations.map((item, index) => (
-                  <li key={index} className="m-4 font-thin text-white text-xl">
-                    <a
-                      href={`#${item}`}
-                      className={`text-text ${styles.animatedUnderline} before:-bottom-1`}
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.aside>
-          )}
+          <AnimatePresence>
+            {toogle && (
+              <motion.aside
+                exit={{
+                  width: 0,
+                  transition: { delay: 0.1, duration: 0.2 },
+                }}
+                initial={{ width: 0 }}
+                animate={{ width: 300 }}
+                className="fixed z-10 top-0 right-0  p-4 h-screen bg-primary"
+              >
+                <motion.div
+                  className="container"
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                  variants={sideVariants}
+                >
+                  <img
+                    src={images.icClose}
+                    alt="hamburger"
+                    onClick={() => setToogle(false)}
+                  />
+                  <ul className="">
+                    {/* <li>Item</li> */}
+                    {navigations.map((item, index) => (
+                      <li
+                        key={index}
+                        className="m-4 font-thin text-white text-xl"
+                      >
+                        <a
+                          href={`#${item}`}
+                          className={`text-text ${styles.animatedUnderline} before:-bottom-1`}
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </motion.aside>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </div>
