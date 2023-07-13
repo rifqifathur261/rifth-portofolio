@@ -98,7 +98,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 1.8 }}
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/sun.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/sun.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layerSun,
@@ -125,13 +125,13 @@ const MultiLayerParallax = () => {
           y: layerBirds,
         }}
       /> */}
-      {/* <motion.div
+      <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
         transition={{ delay: 1.5 }}
         className="absolute inset-0 z-[20]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-6.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-6.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer6,
@@ -144,31 +144,31 @@ const MultiLayerParallax = () => {
         transition={{ delay: 1.2 }}
         className="absolute inset-0 z-[30]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-5.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-5.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer5,
         }}
       />
-      <motion.div
+      {/* <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
         transition={{ delay: 0.9 }}
         className="absolute inset-0 z-[40]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-4.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-4.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
         }}
-      />
+      />*/}
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
         transition={{ delay: 0.6 }}
         className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-3.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-3.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer3,
@@ -180,7 +180,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 0.3 }}
         className="absolute inset-0 z-[60]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-2.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-2.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer2,
@@ -191,12 +191,12 @@ const MultiLayerParallax = () => {
         animate={{ y: [100, 0] }}
         className="absolute inset-0 z-[70]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-1.avif')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-0.png')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer1,
         }}
-      /> */}
+      />
     </div>
   );
 };
