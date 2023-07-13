@@ -11,7 +11,7 @@ const MultiLayerParallax = () => {
     offset: ["start start", "end start"],
   });
 
-  const layer1 = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
+  const layer1 = useTransform(scrollYProgress, [0, 1], ["0%", "1%"]);
   const layer2 = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
   const layer3 = useTransform(scrollYProgress, [0, 1], ["0%", "140%"]);
   const layer4 = useTransform(scrollYProgress, [0, 1], ["0%", "160%"]);
@@ -20,10 +20,6 @@ const MultiLayerParallax = () => {
   const layerBirds = useTransform(scrollYProgress, [0, 1], ["0%", "220%"]);
   const layerSun = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
   const layerTrain = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
-
-  const handleLoader = (img: any) => {
-    console.log("img ", img);
-  };
 
   return (
     <div
@@ -42,7 +38,6 @@ const MultiLayerParallax = () => {
         <TrainLayer />
       </motion.div> */}
       <motion.div
-        onLoad={() => handleLoader("Train2")}
         id="Train2"
         initial={{ x: 1500 }}
         animate={{
@@ -81,9 +76,9 @@ const MultiLayerParallax = () => {
         }}
       />
       <motion.div
-        // initial={{ y: 100 }}
-        // animate={{ y: [100, 0] }}
-        // transition={{ delay: 1.8 }}
+        initial={{ y: 100 }}
+        animate={{ y: [100, 0] }}
+        transition={{ delay: 1.8 }}
         className="absolute inset-0 z-[50] -pb-20"
         style={{
           backgroundImage: `url('../src/assets/images/illustration/Bridge.webp')`,
