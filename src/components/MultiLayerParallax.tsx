@@ -50,7 +50,7 @@ const MultiLayerParallax = () => {
         }}
         className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/Train1.webp')`,
+          backgroundImage: `url('/images/Train1.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
@@ -69,7 +69,7 @@ const MultiLayerParallax = () => {
         }}
         className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/Train1.webp')`,
+          backgroundImage: `url('/images/Train1.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
@@ -81,7 +81,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 1.8 }}
         className="absolute inset-0 z-[50] -pb-20"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/Bridge.webp')`,
+          backgroundImage: `url('/images/Bridge.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
@@ -93,7 +93,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 1.8 }}
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/sun.webp')`,
+          backgroundImage: `url('/images/sun.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layerSun,
@@ -114,7 +114,7 @@ const MultiLayerParallax = () => {
         }}
         className="absolute inset-0 z-[20]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/birds.png')`,
+          backgroundImage: `url('/images/birds.png')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layerBirds,
@@ -139,7 +139,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 1.2 }}
         className="absolute inset-0 z-[30]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-5.webp')`,
+          backgroundImage: `url('/images/layer-5.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer5,
@@ -151,7 +151,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 0.9 }}
         className="absolute inset-0 z-[40]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-4.webp')`,
+          backgroundImage: `url('/images/layer-4.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
@@ -163,7 +163,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 0.6 }}
         className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-3.webp')`,
+          backgroundImage: `url('/images/layer-3.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer3,
@@ -175,7 +175,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 0.3 }}
         className="absolute inset-0 z-[60]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-2.webp')`,
+          backgroundImage: `url('/images/layer-2.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer2,
@@ -186,7 +186,7 @@ const MultiLayerParallax = () => {
         animate={{ y: [100, 0] }}
         className="absolute inset-0 z-[70]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-0.png')`,
+          backgroundImage: `url('/images/layer-0.png')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer1,

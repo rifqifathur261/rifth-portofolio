@@ -1,15 +1,15 @@
 import logo from "../assets/images/rifth_logo_white.avif";
 
 //illustration
-import layer1 from "../assets/images/illustration/layer-1.avif";
-import layer2 from "../assets/images/illustration/layer-2.avif";
-import layer3 from "../assets/images/illustration/layer-3.avif";
-import layer4 from "../assets/images/illustration/layer-4.avif";
-import layer5 from "../assets/images/illustration/layer-5.avif";
-import layer6 from "../assets/images/illustration/layer-6.avif";
-import sun from "../assets/images/illustration/sun.avif";
-import birds from "../assets/images/illustration/birds.avif";
-import river from "../assets/images/illustration/river.avif";
+import layer1 from "/images/layer-1.avif";
+import layer2 from "/images/layer-2.avif";
+import layer3 from "/images/layer-3.avif";
+import layer4 from "/images/layer-4.avif";
+import layer5 from "/images/layer-5.avif";
+import layer6 from "/images/layer-6.avif";
+import sun from "/images/sun.avif";
+import birds from "/images/birds.avif";
+import river from "/images/river.avif";
 
 //indicator
 import indicator from "../assets/images/indicator.svg";
