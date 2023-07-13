@@ -25,28 +25,79 @@ const MultiLayerParallax = () => {
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-content-center bg-illustration-bg"
     >
-      <motion.div
+      {/* <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 80] }}
+        transition={{ delay: 2.5 }}
         className="absolute inset-0 z-[24]"
         style={{
           y: layerTrain,
         }}
       >
         <TrainLayer />
-      </motion.div>
+      </motion.div> */}
       <motion.div
-        initial={{ y: 100 }}
-        animate={{ y: [100, 0] }}
-        transition={{ delay: 3.5 }}
-        className="absolute inset-0 z-0"
+        id="Train2"
+        initial={{ x: 1500 }}
+        animate={{
+          x: [1500, -1500],
+        }}
+        transition={{
+          duration: 11,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/sun.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/Train2.png')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layerSun,
         }}
       />
+      <motion.div
+        id="Train1"
+        initial={{ x: -1500 }}
+        animate={{
+          x: [-1500, 1500],
+        }}
+        transition={{
+          duration: 10,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        className="absolute inset-0 z-[50]"
+        style={{
+          backgroundImage: `url('../src/assets/images/illustration/Train1.png')`,
+          backgroundPosition: "bottom",
+          backgroundSize: "cover",
+          y: layer4,
+        }}
+      />
+      <motion.div
+        // initial={{ y: 100 }}
+        // animate={{ y: [100, 0] }}
+        // transition={{ delay: 1.8 }}
+        className="absolute inset-0 z-[50] -pb-20"
+        style={{
+          backgroundImage: `url('../src/assets/images/illustration/Bridge1.png')`,
+          backgroundPosition: "bottom",
+          backgroundSize: "cover",
+          y: layer4,
+        }}
+      />
+      {/* <motion.div
+        initial={{ y: 100 }}
+        animate={{ y: [100, 0] }}
+        transition={{ delay: 1.8 }}
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('../src/assets/images/illustration/sun.avif')`,
+          backgroundPosition: "bottom",
+          backgroundSize: "cover",
+          y: layerSun,
+        }}
+      /> */}
       {/* <motion.div
         // initial={{ y: 100 }}
         // animate={{ y: [100, 0] }}
@@ -71,10 +122,10 @@ const MultiLayerParallax = () => {
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
-        transition={{ delay: 2.5 }}
-        className="absolute inset-0 z-[21]"
+        transition={{ delay: 1.5 }}
+        className="absolute inset-0 z-[20]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-6.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-6.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer6,
@@ -84,10 +135,10 @@ const MultiLayerParallax = () => {
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
-        transition={{ delay: 2 }}
-        className="absolute inset-0 z-[22]"
+        transition={{ delay: 1.2 }}
+        className="absolute inset-0 z-[30]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-5.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-5.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer5,
@@ -96,10 +147,10 @@ const MultiLayerParallax = () => {
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
-        transition={{ delay: 1.5 }}
-        className="absolute inset-0 z-[23]"
+        transition={{ delay: 0.9 }}
+        className="absolute inset-0 z-[40]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-4.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-4.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer4,
@@ -108,10 +159,10 @@ const MultiLayerParallax = () => {
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
-        transition={{ delay: 1 }}
-        className="absolute inset-0 z-[24]"
+        transition={{ delay: 0.6 }}
+        className="absolute inset-0 z-[50]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-3.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-3.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer3,
@@ -120,10 +171,10 @@ const MultiLayerParallax = () => {
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
-        transition={{ delay: 0.5 }}
-        className="absolute inset-0 z-[25]"
+        transition={{ delay: 0.3 }}
+        className="absolute inset-0 z-[60]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-2.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-2.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer2,
@@ -132,9 +183,9 @@ const MultiLayerParallax = () => {
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
-        className="absolute inset-0 z-30"
+        className="absolute inset-0 z-[70]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-1.png')`,
+          backgroundImage: `url('../src/assets/images/illustration/layer-1.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer1,
