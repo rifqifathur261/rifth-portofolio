@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${styles.flexCenter} w-full bg-transparent backdrop-blur-sm fixed z-[50]`}
+      className={`${styles.flexCenter} w-full bg-transparent backdrop-blur-sm fixed z-[100]`}
     >
       <nav
         className={`container flex justify-between items-center ${styles.padding}`}
