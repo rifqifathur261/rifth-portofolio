@@ -126,7 +126,7 @@ const MultiLayerParallax = () => {
         transition={{ delay: 1.5 }}
         className="absolute inset-0 z-[20]"
         style={{
-          backgroundImage: `url('../src/assets/images/illustration/layer-6.webp')`,
+          backgroundImage: `url('/images/layer-6.webp')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layer6,
