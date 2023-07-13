@@ -19,7 +19,7 @@ const MultiLayerParallax = () => {
   const layer6 = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
   const layerBirds = useTransform(scrollYProgress, [0, 1], ["0%", "220%"]);
   const layerSun = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
-  const layerTrain = useTransform(scrollYProgress, [0, 1], ["-10%", "180%"]);
+  const layerTrain = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
 
   return (
     <div
@@ -28,7 +28,7 @@ const MultiLayerParallax = () => {
     >
       <motion.div
         initial={{ y: 100 }}
-        animate={{ y: [100, -80] }}
+        animate={{ y: [0, 180] }}
         transition={{ delay: 2.5 }}
         className="absolute inset-0 z-[50]"
         style={{
