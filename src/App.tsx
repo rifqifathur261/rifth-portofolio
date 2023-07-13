@@ -12,9 +12,10 @@ import {
   Footer,
   Loader,
 } from "./components/";
+import MultiLayerParallax from "./components/MultiLayerParallax";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
@@ -25,11 +26,11 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
-        <ParallaxProvider>
+        <div>
           <div className="font-walsheim bg-base w-full">
             <Navbar />
-
-            <Hero />
+            <MultiLayerParallax />
+            {/* <Hero /> */}
 
             <div
               className={`${styles.paddingX} ${styles.flexCenter} z-[2] absolute bg-base w-full`}
@@ -43,7 +44,9 @@ const App = () => {
               </div>
             </div>
           </div>
-        </ParallaxProvider>
+        </div>
+        // <ParallaxProvider>
+        // </ParallaxProvider>
       )}
     </>
   );

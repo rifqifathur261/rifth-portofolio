@@ -24,10 +24,14 @@ const About = () => {
           HI, MY NAME IS
         </p>
         <h1
-          className={`${styles.primaryTextGradient} font-bold text-6xl mt-16`}
+          className={`${styles.primaryTextGradient}  font-bold text-6xl mt-16`}
         >
           {about.name}
-          <div>{about.profession}</div>
+          <br />
+          Fathurrahman
+          {/* <div className={`${styles.occeanTextGradient}`}>
+            {about.profession}
+          </div> */}
         </h1>
         <div className={styles.flexCenter}>
           <p className="text-center text-grey font-bold text-2xl mt-10 sm:max-w-[480px] w-full">

@@ -10,14 +10,15 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${styles.flexCenter} w-full bg-transparent backdrop-blur-sm fixed z-[3]`}
+      className={`${styles.flexCenter} w-full bg-transparent backdrop-blur-sm fixed z-[50]`}
     >
       <nav
         className={`container flex justify-between items-center ${styles.padding}`}
       >
         <motion.img
-          whileInView={{ x: [0, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.5, delay: 1 }}
+          initial={{ x: -100 }}
+          animate={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           src={images.logo}
           alt="navbar logo"
           className="w-[90px] h-[20px]"
@@ -53,10 +54,6 @@ const Navbar = () => {
             <motion.aside
               initial={{ width: 0 }}
               animate={{ width: 300 }}
-              exit={{
-                width: 0,
-                transition: { delay: 0.7, duration: 0.3 },
-              }}
               className="fixed z-10 top-0 right-0  p-4 h-screen bg-primary"
             >
               <img

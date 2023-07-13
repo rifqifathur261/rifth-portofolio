@@ -97,10 +97,15 @@ const Projects = () => {
             <div className="bg-base-2 w-full rounded-lg p-4" key={index}>
               <div className="relative h-52">
                 {item.imgUrl && (
-                  <img
+                  <motion.img
+                    whileInView={{ scale: [0.95, 1] }}
+                    whileHover={{ scale: [1, 0.95] }}
+                    transition={{
+                      duration: 0.25,
+                    }}
                     src={urlFor(item.imgUrl).url()}
                     alt="project image"
-                    className="w-full absolute h-52 object-cover rounded-lg"
+                    className="w-full absolute h-52 object-cover rounded-lg cursor-pointer"
                   />
                 )}
                 <div className="absolute bg-base-2 w-40 h-50 rounded-tl-lg rounded-tr-lg px-4 py-1 z-10 bottom-0 left-1/2 -ml-20 text-center text-grey">
