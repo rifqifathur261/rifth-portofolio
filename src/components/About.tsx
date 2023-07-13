@@ -24,7 +24,7 @@ const About = () => {
           HI, MY NAME IS
         </p>
         <h1
-          className={`${styles.primaryTextGradient}  font-bold text-6xl mt-16`}
+          className={`${styles.primaryTextGradient}  font-bold text-5xl mt-16`}
         >
           {about.name}
           <br />
