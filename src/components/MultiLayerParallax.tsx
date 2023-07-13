@@ -19,25 +19,25 @@ const MultiLayerParallax = () => {
   const layer6 = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
   const layerBirds = useTransform(scrollYProgress, [0, 1], ["0%", "220%"]);
   const layerSun = useTransform(scrollYProgress, [0, 1], ["0%", "240%"]);
-  const layerTrain = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
+  const layerTrain = useTransform(scrollYProgress, [0, 1], ["-10%", "180%"]);
 
   return (
     <div
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-content-center bg-illustration-bg"
     >
-      {/* <motion.div
+      <motion.div
         initial={{ y: 100 }}
-        animate={{ y: [100, 80] }}
+        animate={{ y: [100, -80] }}
         transition={{ delay: 2.5 }}
-        className="absolute inset-0 z-[24]"
+        className="absolute inset-0 z-[50]"
         style={{
           y: layerTrain,
         }}
       >
         <TrainLayer />
-      </motion.div> */}
-      <motion.div
+      </motion.div>
+      {/* <motion.div
         id="Train2"
         initial={{ x: 1500 }}
         animate={{
@@ -86,19 +86,19 @@ const MultiLayerParallax = () => {
           backgroundSize: "cover",
           y: layer4,
         }}
-      />
-      {/* <motion.div
+      /> */}
+      <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
         transition={{ delay: 1.8 }}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-10"
         style={{
-          backgroundImage: `url('/images/sun.webp')`,
+          backgroundImage: `url('/images/sun.avif')`,
           backgroundPosition: "bottom",
           backgroundSize: "cover",
           y: layerSun,
         }}
-      /> */}
+      />
       {/* <motion.div
         // initial={{ y: 100 }}
         // animate={{ y: [100, 0] }}
@@ -145,7 +145,7 @@ const MultiLayerParallax = () => {
           y: layer5,
         }}
       />
-      {/* <motion.div
+      <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
         transition={{ delay: 0.9 }}
@@ -156,7 +156,7 @@ const MultiLayerParallax = () => {
           backgroundSize: "cover",
           y: layer4,
         }}
-      />*/}
+      />
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: [100, 0] }}
